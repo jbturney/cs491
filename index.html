@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Should I Do? · Activity Suggester</title>
+  <link rel="preconnect" href="https://bored-api.appbrewery.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <h1>What should I do? 🎲</h1>
+      <p class="subtitle">Beat boredom with a random activity — or dial in exactly what you're in the mood for.</p>
+    </header>
+
+    <section class="controls" aria-label="Activity filters">
+      <div class="field">
+        <label for="type">Type</label>
+        <select id="type">
+          <option value="">Any type</option>
+          <option value="education">Education</option>
+          <option value="recreational">Recreational</option>
+          <option value="social">Social</option>
+          <option value="diy">DIY</option>
+          <option value="charity">Charity</option>
+          <option value="cooking">Cooking</option>
+          <option value="relaxation">Relaxation</option>
+          <option value="music">Music</option>
+          <option value="busywork">Busywork</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="participants">Participants</label>
+        <select id="participants">
+          <option value="">Any number</option>
+          <option value="1">1 (solo)</option>
+          <option value="2">2 (pair)</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="price">Max price <span id="priceLabel" class="hint">any</span></label>
+        <input type="range" id="price" min="0" max="100" value="100" step="5" />
+      </div>
+
+      <div class="field">
+        <label for="accessibility">Max effort <span id="accLabel" class="hint">any</span></label>
+        <input type="range" id="accessibility" min="0" max="100" value="100" step="5" />
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="suggestBtn" class="btn primary" type="button">Suggest an activity</button>
+      <button id="randomBtn" class="btn ghost" type="button">Surprise me 🎲</button>
+    </div>
+
+    <section id="result" class="result" aria-live="polite"></section>
+  </main>
+
+  <footer class="credit">
+    Activities from the <a href="https://bored-api.appbrewery.com" target="_blank" rel="noopener">Bored API</a> (App Brewery).
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
